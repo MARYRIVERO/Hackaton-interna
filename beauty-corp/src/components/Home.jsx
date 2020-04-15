@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from '../firebase/firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import ItemProduct from '../components/ItemProduct';
+import Header from './Header';
 
 const Home = () => {
   const [value, loading, error] = useCollection(
@@ -13,6 +14,7 @@ const Home = () => {
   
   return (
     <div>
+      <Header />
       <section>
         {error && <strong>Error: {JSON.stringify(error)}</strong>}
         {loading && <span> Loading...</span>}
