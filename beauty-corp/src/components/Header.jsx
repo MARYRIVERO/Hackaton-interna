@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 /* import imgSearch from '../img/search-engine.png';
 import imgUser from '../img/user.png';
 import imgPurse from '../img/purse.png'; */
@@ -11,7 +12,7 @@ const Header = ({ setType }) => {
           <button type="button" className="" onClick={() => setType('Esika')}>Esika</button>
           <button type="button" className="" onClick={() => setType('Cyzone')}>Cyzone</button>
           <button type="button" className="" onClick={() => setType('LBel')}>LBel</button>
-
+          <Link to="/ShoppingCart"><button>Carrito</button></Link>
         </section>
         <section>
           <nav>
