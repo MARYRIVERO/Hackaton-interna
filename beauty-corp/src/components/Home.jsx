@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import firebase from '../firebase/firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import ItemProduct from '../components/ItemProduct';
-import { useState } from 'react';
 
-const Home = () => {
+const Home = ({ type }) => {
   const [arrayProducts, setArrayProducts] = useState([]);
   const [value, loading, error] = useCollection(
     firebase.firestore().collection('products'),
@@ -28,22 +27,21 @@ const Home = () => {
   };
   console.log(arrayProducts);
   localStorage.setItem('arrayProducts', JSON.stringify(arrayProducts));
-  
+
   return (
-    <div>
-      <section>
-        {error && <strong>Error: {JSON.stringify(error)}</strong>}
-        {loading && <span> Loading...</span>}
-        {value && (
-          <ul>
-            {value.docs.map((doc, i) =>
-              <ItemProduct key={i} obj={doc.data()} sendToCart={sendToCart} />
-            )}
-          </ul>
-        )}
-      </section>
-    </div>
-  );
-};
+    <section>
+      {error && <strong>Error: {JSON.stringify(error)}</strong>}
+      {loading && <span> Loading...</span>}
+      {value && (
+        <section>
+        {value.docs.filter(doc => doc.data().brand === type)
+          .map(doc =>
+            <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
+          )}
+        </section>
+      )};
+    </section>
+  )
+}
 
 export default Home;
