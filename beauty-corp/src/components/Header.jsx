@@ -1,26 +1,17 @@
 import React from 'react';
-/* import imgSearch from '../img/search-engine.png';
-import imgUser from '../img/user.png';
-import imgPurse from '../img/purse.png'; */
+import MenuNav from './MenuNav';
+import Button from 'react-bootstrap/Button';
+
 
 const Header = () => {
     return (
         <header>
             <section>
-                <button>LBel</button>
-                <button>Esika</button>
-                <button>Cyzone</button>
+                <Button variant="secondary">LBel</Button>{' '}
+                <Button variant="secondary">Esika</Button>{' '}
+                <Button variant="secondary">Cyzone</Button>{' '}
             </section>
-            <section>
-                <nav>
-                    <h3>Belcorp</h3>
-                    <div>
-                        <img /* src={imgSearch}  */alt="" />
-                        <img /* src={imgUser} */ alt="" />
-                        <img /* src={imgPurse} */ alt="" />
-                    </div>
-                </nav>
-            </section>
+            <MenuNav />
         </header>
     )
 }
