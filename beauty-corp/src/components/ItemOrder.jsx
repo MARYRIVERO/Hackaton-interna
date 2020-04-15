@@ -7,7 +7,7 @@ const ItemOrder = ({ name, priceFinal, count }) => {
       <td>{count}</td>
       <td>
         S/.
-        {priceFinal * count}
+        {(priceFinal * count).toFixed(2)}
       </td>
     </tr>
   );

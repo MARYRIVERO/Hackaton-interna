@@ -1,11 +1,11 @@
 import React from 'react';
-import Father from './components/Father';
+import Routes from './Routes';
 import './App.css';
 
 const App = () => {
   return (
     <div>
-      <Father />
+      <Routes />
     </div>
   );
 }
