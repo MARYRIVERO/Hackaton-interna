@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signIn, logIn } from '../controller/firebase-login';
+import { logIn } from '../controller/firebase-login';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -19,23 +19,23 @@ const Login = () => {
   };
 
   return (
-  <form onSubmit={handleSubmit}>
-    <input
-      type="email"
-      value={email}
-      placeholder="Ingrese E-mail"
-      onChange={handleEmail}
-    />
-    <input
-      type="password"
-      value={password}
-      placeholder="Ingrese Contraseña"
-      onChange={handlePassword}
-    />
-    <button type="submit" onClick={handleSubmit}>
-      Iniciar sesión
+    <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        value={email}
+        placeholder="Ingrese E-mail"
+        onChange={handleEmail}
+      />
+      <input
+        type="password"
+        value={password}
+        placeholder="Ingrese Contraseña"
+        onChange={handlePassword}
+      />
+      <button type="submit" onClick={handleSubmit}>
+        Iniciar sesión
     </button>
-  </form>
+    </form>
 )};
 
 export default Login;
