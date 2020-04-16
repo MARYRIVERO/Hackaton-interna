@@ -1,8 +1,6 @@
 $smartphone: 480px;
 $tablet: 800px;
 $desktop: 1024px;
-
-
 @mixin style($direction, $content) {
     width: 100%;
     display: flex;
@@ -12,15 +10,10 @@ $desktop: 1024px;
     align-items: $content;
 }
 
-
-header{
-
+header {
     @include style(column, center);
-
     section {
-
         @include style(row, space-around);
-
         .buttonBrand {
             background: #6D308F;
             border-color: rgb(117, 44, 156);
@@ -29,16 +22,15 @@ header{
             font-size: 14px;
             line-height: 19px;
             color: #FFFFFF;
-
             @media (max-width: $smartphone) {
                 width: 40%;
                 height: 50px;
             }
-            @media (min-width: $smartphone) and (max-width: $tablet){
+            @media (min-width: $smartphone) and (max-width: $tablet) {
                 width: 45%;
                 height: 65px;
             }
-            @media (min-width: $tablet) and (max-width: $desktop){
+            @media (min-width: $tablet) and (max-width: $desktop) {
                 width: 50%;
                 height: 75px;
             }
@@ -48,12 +40,9 @@ header{
             }
         }
     }
-
     nav {
-
         @include style(row, center);
-
-        .imgLogo{
+        .imgLogo {
             width: 32px;
         }
 
