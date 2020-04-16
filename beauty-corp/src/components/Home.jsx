@@ -39,7 +39,7 @@ const Home = ({ type }) => {
             <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
           )}
         </section>
-      )};
+      )}
     </section>
   );
 };
