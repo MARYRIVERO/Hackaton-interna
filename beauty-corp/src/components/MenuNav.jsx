@@ -20,10 +20,7 @@ const MenuNav = ({setCategory}) => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item active text-center">
-                        <a className="navbar-brand text-center" href="./">Esika</a>
-                    </li>
-                    <li className="nav-item active text-center">
-                        <a className="nav-link" href="./">Ofertas imperdibles</a>
+                        <a className="navbar-brand text-center" href="./">Bella</a>
                     </li>
                     <li className="nav-item active text-center">
                         <spam className="nav-link" onClick={() => setCategory('Maquillaje')}>Maquillaje</spam>
