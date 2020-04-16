@@ -18,9 +18,11 @@ const MenuNav = ({setCategory}) => {
             <a className="navbar-brand" href="./"><img src={imgUser}/></a>
             <Link to="/ShoppingCart"><a className="navbar-brand" href="./"><img src={imgPurse}/></a></Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a className="navbar-brand" href="./">Esika</a>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li className="nav-item active">
+                    <li className="nav-item active text-center">
+                        <a className="navbar-brand text-center" href="./">Esika</a>
+                    </li>
+                    <li className="nav-item active text-center">
                         <a className="nav-link" href="./">Ofertas imperdibles</a>
                     </li>
                     <li className="nav-item active">
