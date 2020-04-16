@@ -1,19 +1,19 @@
 import React from 'react';
 import MenuNav from './MenuNav';
-import Button from 'react-bootstrap/Button';
 
 
-const Header = () => {
-    return (
-        <header>
-            <section>
-                <Button variant="secondary">LBel</Button>{' '}
-                <Button variant="secondary">Esika</Button>{' '}
-                <Button variant="secondary">Cyzone</Button>{' '}
-            </section>
-            <MenuNav />
-        </header>
-    )
+const Header = ({ setType }) => {
+  return (
+      <header>
+        <section>
+          <button type="button" className="buttonBrand" onClick={() => setType('Esika')}>Esika</button>
+          <button type="button" className="buttonBrand" onClick={() => setType('Cyzone')}>Cyzone</button>
+          <button type="button" className="buttonBrand" onClick={() => setType('LBel')}>LBel</button>
+        </section>
+        <MenuNav/>
+      </header>
+  )
 }
+
 
 export default Header;

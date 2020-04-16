@@ -1,13 +1,12 @@
 import React from 'react';
-import Routes from './Routes';
-import Header from './components/Header'
+import Father from './components/Father';
 import './App.css';
+import './css/styles.css';
 
 const App = () => {
   return (
     <div>
-      <Header/>
-      <Routes />
+      <Father />
     </div>
   );
 }
