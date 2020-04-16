@@ -13,6 +13,8 @@ const Routes = () => {
         <Route path='/ShoppingCart' component={ShoppingCart} />
       </Switch>
     </BrowserRouter>
-  )};
+  )
+};
+
 
 export default Routes;

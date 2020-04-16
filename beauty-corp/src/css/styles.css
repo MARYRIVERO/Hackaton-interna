@@ -60,4 +60,13 @@ header nav .imgLogo {
   width: 32px;
 }
 
+.root {
+  display: flex;
+  width: 100%;
+}
+.root .app {
+  display: flex;
+  width: 100%;
+}
+
 /*# sourceMappingURL=styles.css.map */
