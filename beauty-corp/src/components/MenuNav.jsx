@@ -14,9 +14,6 @@ const MenuNav = ({setCategory}) => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <a className="navbar-brand" href="./"><img src={imgLogo} className="imgLogo"/></a>
-            <a className="navbar-brand" href="./"><img src={imgSearch}/></a>
-            <a className="navbar-brand" href="./"><img src={imgUser}/></a>
-            <Link to="/ShoppingCart"><a className="navbar-brand" href="./"><img src={imgPurse}/></a></Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item active text-center">
@@ -48,6 +45,9 @@ const MenuNav = ({setCategory}) => {
                     </li>
                 </ul>
             </div>
+            <a className="navbar-brand" href="./"><img src={imgUser}/></a>
+            <a className="navbar-brand" href="./"><img src={imgSearch}/></a>
+            <Link to="/ShoppingCart"><a className="navbar-brand" href="./"><img src={imgPurse}/></a></Link>
         </nav>
     )
 };
