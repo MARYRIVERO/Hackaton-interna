@@ -1,0 +1,46 @@
+$smartphone: 480px;
+$tablet: 800px;
+$desktop: 1024px;
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+
+        .buttonBrand {
+            background: #6D308F;
+            border-color: rgb(117, 44, 156);
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #FFFFFF;
+
+            @media (max-width: $smartphone) {
+                width: 160px;
+                height: 50px;
+            }
+            @media (min-width: $smartphone) and (max-width: $tablet){
+                width: 400px;
+                height: 65px;
+            }
+            @media (min-width: $desktop) {
+                width: 500px;
+                height: 75px;
+            }
+        }
+    }
+
+    nav {
+        .imgLogo{
+            width: 32px;
+        }
+    }
+}
