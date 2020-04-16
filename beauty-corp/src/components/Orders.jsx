@@ -31,7 +31,7 @@ const Orders = ({ dataOrders }) => {
             <th>{' '}</th>
             <th>
               S/.
-              {totalPrice}
+              {totalPrice.toFixed(2)}
             </th>
             <th>{' '}</th>
           </tr>
