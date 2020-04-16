@@ -7,9 +7,9 @@ const Header = ({ setType, setCategory }) => {
   return (
       <header>
         <section>
-          <button type="button" className="buttonBrand" onClick={() => setType('Esika')}>Esika</button>
-          <button type="button" className="buttonBrand" onClick={() => setType('Cyzone')}>Cyzone</button>
-          <button type="button" className="buttonBrand" onClick={() => setType('LBel')}>LBel</button>
+          <button type="button" className="buttonBrand" onClick={() => setType('Esika')}>Bella</button>
+          <button type="button" className="buttonBrand" onClick={() => setType('Cyzone')}>MakeUp</button>
+          <button type="button" className="buttonBrand" onClick={() => setType('LBel')}>Natural</button>
           {/* <Link to="/ShoppingCart"><button>Carrito</button></Link> */}
         </section>
         <MenuNav setCategory={setCategory} />
