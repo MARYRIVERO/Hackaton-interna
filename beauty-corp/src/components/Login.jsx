@@ -36,6 +36,7 @@ const Login = () => {
         Iniciar sesión
     </button>
     </form>
-)};
+  )
+};
 
 export default Login;
