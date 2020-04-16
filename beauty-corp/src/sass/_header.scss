@@ -5,13 +5,15 @@ $desktop: 1024px;
 header{
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    width: 100%;
 
     section {
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: nowrap;
 
         .buttonBrand {
             background: #6D308F;
@@ -24,21 +26,31 @@ header{
             color: #FFFFFF;
 
             @media (max-width: $smartphone) {
-                width: 160px;
+                width: 40%;
                 height: 50px;
             }
             @media (min-width: $smartphone) and (max-width: $tablet){
-                width: 400px;
+                width: 45%;
                 height: 65px;
             }
+            @media (min-width: $tablet) and (max-width: $desktop){
+                width: 50%;
+                height: 75px;
+            }
             @media (min-width: $desktop) {
-                width: 500px;
+                width: 55%;
                 height: 75px;
             }
         }
     }
 
     nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+
         .imgLogo{
             width: 32px;
         }
