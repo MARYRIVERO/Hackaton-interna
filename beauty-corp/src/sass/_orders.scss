@@ -1,0 +1,37 @@
+$margin: 1rem;
+$font-size: 1.2rem;
+
+.orders-container {
+  hr {
+    margin: 0;
+  }
+
+  .btn-send {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    padding: 0;
+    font-size: $font-size;
+    img {
+      margin: $margin $margin $margin 0;
+      width: 1.7rem;
+    }
+  }
+
+  .subtotal {
+    display: flex;
+    justify-content: space-between;
+  
+    span {
+      margin: $margin;
+      font-size: $font-size;
+      font-weight: 500;
+    }
+  }
+  
+  .btn-buy {
+    border: none;
+    width: 100%;
+    padding: $margin;
+  }
+}

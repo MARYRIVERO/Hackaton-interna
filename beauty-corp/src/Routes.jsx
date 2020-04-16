@@ -7,12 +7,13 @@ import Header from './components/Header';
 
 const Routes = () => {
   const [type, setType] = useState();
+  const [category, setCategory] = useState();
 
   return (
     <BrowserRouter>
-      <Header setType={setType} />
+      <Header setType={setType} setCategory={setCategory}/>
       <Switch>
-        <Route exact path='/'><Home type={type} /></Route>
+        <Route exact path='/'><Home type={type} category={category} /></Route>
         <Route path='/Login' component={Login} />
         <Route path='/ShoppingCart' component={ShoppingCart} />
       </Switch>

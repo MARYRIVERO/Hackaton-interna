@@ -3,7 +3,7 @@ import firebase from '../firebase/firebase';
 import { useCollection } from 'react-firebase-hooks/firestore';
 import ItemProduct from '../components/ItemProduct';
 
-const Home = ({ type }) => {
+const Home = ({ type, category }) => {
   const [arrayProducts, setArrayProducts] = useState([]);
   const [value, loading, error] = useCollection(
     firebase.firestore().collection('products'),
@@ -25,6 +25,7 @@ const Home = ({ type }) => {
       setArrayProducts(newArr);
     }
   };
+
   console.log(arrayProducts);
   localStorage.setItem('arrayProducts', JSON.stringify(arrayProducts));
 
@@ -34,7 +35,8 @@ const Home = ({ type }) => {
       {loading && <span> Loading...</span>}
       {value && (
         <section>
-        {value.docs.filter(doc => doc.data().brand === type)
+        {value.docs.filter(doc => (!type || (type && doc.data().brand === type)) && 
+        (!category || (category && doc.data().category === category)))
           .map(doc =>
             <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
           )}
@@ -45,3 +47,4 @@ const Home = ({ type }) => {
 };
 
 export default Home;
+
