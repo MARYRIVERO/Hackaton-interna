@@ -3,29 +3,27 @@ import Banner from '../img/chicabeautycorp.jpg';
 import Asesora from '../img/asesoras.png';
  const ItemBaner = () => {
     return (
-      <div className="container-baner">
+      <section className="container-baner">
           <div className ="image-banner">
           <img className="icon-baner" src={Banner} alt="baner de beautycorp"></img>
           </div>
-            <div className="col s12 m8 offset-m2 l6 offset-l3">
-            <div className="card-panel grey lighten-5 z-depth-1">
-            <div className="row valign-wrapper">
-                <div class="col s2">
-                 <img src={Asesora} alt="" class="circle responsive-img"/>
-            </div>
-            <div className="col s10">
-                <span className="black-text">
-                 MI CONSULTORA:
-                </span>
-                <h5>Sofía Diaz</h5>
-            </div>
-            </div>
-            </div>
-        </div>  
+        <div className="container-baners card bg-light mb-3" >
+      <div className="card-body ">
+      <div className=" body-consultora row " >
+      <div className="container-image col-md-6  ">
+      <img src={Asesora} alt="" className="circle responsive-img"/>
       </div>
+      <div className=" col-md-6" >
+      <h5 className="name-consultora card-text text-dark">MI CONSULTORA: </h5>
+        <p className="card-text text-dark mb-3">Sofía Diaz</p>
+      </div>
+    </div>
+      </div> 
+    </div>
+
+      </section>
       
-      
-      
+
     )
 }
 export default ItemBaner;

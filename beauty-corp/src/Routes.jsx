@@ -14,6 +14,7 @@ const Routes = () => {
       <Header setType={setType} setCategory={setCategory}/>
       <Switch>
         <Route exact path='/'><Home type={type} category={category} /></Route>
+        
         <Route path='/Login' component={Login} />
         <Route path='/ShoppingCart' component={ShoppingCart} />
       </Switch>

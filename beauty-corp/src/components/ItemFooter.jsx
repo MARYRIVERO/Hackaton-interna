@@ -5,59 +5,46 @@ import IconInstagram from '../img/logotipo-de-instagram.svg';
 import IconYotube from '../img/youtube.svg';
 import Logo from '../img/logobeautycorp.png';
 
-
  const ItemFooter = () => {
     return (
-     <footer className= "page-footer blue-grey lighten-4">
-         <div>
+     <footer className= "page-footer ">
+
+   
+
+ 
+    <div className=" conten-home text-center center-block">
+        <div className= "logo-footer">
          <img src= {Logo}/>
          </div>
-        <div className="col l6 s12">
-            <div>  
-            <h5 className="black-text text-lighten-4">Libro de Reclamos</h5>
-                <p className="black-text text-lighten-4">Buzon de Quejas y Sugerencias</p>
-                <p className="black-text text-lighten-4">Catálogos</p>
+            <p className="txt-railway">- Libro de Reclamos -</p>
+            <p className="txt-railway">- Buzón de Quejas y sugerencias -</p>
+            <p className="txt-railway">- Catálogos -</p>
+
+            <div className ="table-red-social">
+            <img className= "fa  fa-3x social"src= { IconFb }/>
+            <img className= "fa  fa-3x social"src= { IconInstagram }/>
+            <img className= " fa-3x social"src= { IconTwiter }/>
+             <img className= "fa  fa-3x social"src= { IconYotube }/>
             </div>
-           <div className="row">
-             <div className="col s1">
-                <img className= "icon-redes z-depth-2"src= {IconFb}/>
+         
+            <p className="txt-railway">- Recibe Promociones Ofertas. Noticias -</p> 
+            <section className="body-input">
+        
+            <input type="text"  className="firstname" placeholder="Correo Electrónico."/>
+
+            </section>  
+            <div className="button-header">
+                <button type="button" >Enviar</button>
             </div>
-            <div className="col s1">
-                <img className= "icon-redes z-depth-2"src=  {IconFb}/>
-            </div>
-            <div className="col s1">
-                <img className= "icon-redes z-depth-2" src= {IconInstagram}/>
-            </div>
-            <div className="col s1">
-                <img className= "icon-redes z-depth-2"src= {IconYotube}/>
-            </div>
-            
-         </div>
-    
-                <p className="black-text text-lighten-4">Recibe oferta y promociones</p>
-        </div>
-        <div className="col l6 s12">
-        <div className="row">
-    <form className="col s12">
-      <div className="row">
-        <div className="input-field col s6">
-          <i className="material-icons prefix"></i>
-          <textarea id="icon_prefix2" className="materialize-textarea"></textarea>
-          <label for="icon_prefix2">Ingrese su correo electrónico</label>
-        </div>
-        <div>
-        <a class="waves-light btn purple darken-3">Enviar</a>
-        </div>
-      </div>
-    </form>
-  </div>        
-        </div>
-        <div class="footer-copyright row">
-            <div class="container">
+             <div className="footer-copyright row">
+            <div className="container">
                 &copy; 2020 Copyright Sistemas-BeautiCorp- Todos los derechos reservados.
-                <a class="grey-text text-lighten-4 right" href="#!"></a>
+                <a className="grey-text text-lighten-4 right" href="#!"></a>
             </div>
         </div>
+
+</div>
+
      </footer>
     )
 }

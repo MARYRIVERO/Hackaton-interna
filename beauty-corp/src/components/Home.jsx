@@ -33,10 +33,16 @@ const Home = ({ type, category }) => {
   localStorage.setItem('arrayProducts', JSON.stringify(arrayProducts));
 
   return (
-    <section>
+    <section className= "Home-body">
       <section className= "Home-body">
       {error && <strong>Error: {JSON.stringify(error)}</strong>}
       {loading && <span> Loading...</span>}
+      <section>
+        <ItemBaner/>
+      </section>
+      <section>
+        <ItemCarruselOfferst/>
+      </section>
       {value && (
         <section>
         {value.docs.filter(doc => (!type || (type && doc.data().brand === type)) && 
@@ -46,12 +52,7 @@ const Home = ({ type, category }) => {
           )}
         </section>
       )}
-      <section>
-        <ItemBaner/>
-      </section>
-      <section>
-        <ItemCarruselOfferst/>
-      </section>
+     
       </section>
       <footer>
       <ItemFooter/>

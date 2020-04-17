@@ -13,7 +13,7 @@ const MenuNav = ({setCategory}) => {
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <a className="navbar-brand" href="./"><img src={imgLogo} className="imgLogo"/></a>
+            <a className="navbar-brand" href="./homepage"><img src={imgLogo} className="imgLogo"/></a>
             <a className="navbar-brand" href="./"><img src={imgSearch}/></a>
             <a className="navbar-brand" href="./"><img src={imgUser}/></a>
             <Link to="/ShoppingCart"><a className="navbar-brand" href="./"><img src={imgPurse}/></a></Link>
