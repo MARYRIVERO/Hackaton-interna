@@ -1,214 +1,187 @@
 header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 header section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: space-around;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: space-around;
 }
-
 header section .buttonBrand {
-    background: #6D308F;
-    border-color: #752c9c;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-    color: #FFFFFF;
+  background: #6D308F;
+  border-color: #752c9c;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
 }
-
 @media (max-width: 480px) {
-    header section .buttonBrand {
-        width: 40%;
-        height: 50px;
-    }
+  header section .buttonBrand {
+    width: 40%;
+    height: 50px;
+  }
 }
-
 @media (min-width: 480px) and (max-width: 800px) {
-    header section .buttonBrand {
-        width: 45%;
-        height: 65px;
-    }
+  header section .buttonBrand {
+    width: 45%;
+    height: 65px;
+  }
 }
-
 @media (min-width: 800px) and (max-width: 1024px) {
-    header section .buttonBrand {
-        width: 50%;
-        height: 75px;
-    }
+  header section .buttonBrand {
+    width: 50%;
+    height: 75px;
+  }
 }
-
 @media (min-width: 1024px) {
-    header section .buttonBrand {
-        width: 55%;
-        height: 75px;
-    }
+  header section .buttonBrand {
+    width: 55%;
+    height: 75px;
+  }
 }
-
 header nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-
 header nav .imgLogo {
-    width: 32px;
+  width: 32px;
 }
 
 .item-order-container {
-    display: flex;
-    max-width: 100vw;
-    margin: 10px;
+  display: flex;
+  max-width: 100vw;
+  margin: 10px;
 }
-
 .item-order-container .img {
-    width: 30%;
+  width: 30%;
 }
-
 .item-order-container .description {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .item-order-container .description .name {
-    align-self: center;
-    margin: 15px 0 15px 0;
+  align-self: center;
+  margin: 15px 0 15px 0;
 }
-
 .item-order-container .description p {
-    margin: 15px 30px 15px 30px;
+  margin: 15px 30px 15px 30px;
 }
-
 .item-order-container .description .btn-qty {
-    cursor: pointer;
-    width: 2.5rem;
+  cursor: pointer;
+  width: 2.5rem;
 }
-
 .item-order-container .description .delete-price {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-
 .item-order-container .description .btn-delete {
-    border: none;
-    background-color: transparent;
-    text-decoration: underline;
-    font-weight: 500;
-    cursor: pointer;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .container-baner .image-banner {
-    display: flex;
+  display: flex;
 }
-
 .container-baner .image-banner .icon-baner {
-    justify-content: center;
-    width: 100%;
-    height: 400px;
+  justify-content: center;
+  width: 100%;
 }
-
-.container-baner .container-baners .container-image img {
-    border-radius: 50%;
+.container-baner .container-baners .card-body {
+  background-color: #7AC4A7;
+}
+.container-baner .container-baners .card-body .container-image img {
+  border-radius: 50%;
 }
 
 footer {
-    background-color: #BBC1C8;
+  background-color: #BBC1C8;
 }
-
 footer .body-input input {
-    border-radius: 5px;
-    border: 1px solid #4f0558;
+  border-radius: 5px;
+  border: 1px solid #4f0558;
 }
-
 footer .button-header button {
-    border-radius: 10px;
-    background-color: #4f0558;
-    color: #f1f5fa;
+  border-radius: 10px;
+  background-color: #4f0558;
+  color: #f1f5fa;
 }
-
 footer .logo-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
 footer .logo-footer img {
-    width: 10%;
-    height: 20%;
+  width: 10%;
+  height: 20%;
 }
-
 footer .logo-footer .footer-letters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .orders-container hr {
-    margin: 0;
+  margin: 0;
 }
-
 .orders-container .btn-send {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    padding: 0;
-    font-size: 1.2rem;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 0;
+  font-size: 1.2rem;
 }
-
 .orders-container .btn-send img {
-    margin: 1rem 1rem 1rem 0;
-    width: 1.7rem;
+  margin: 1rem 1rem 1rem 0;
+  width: 1.7rem;
 }
-
 .orders-container .subtotal {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-
 .orders-container .subtotal span {
-    margin: 1rem;
-    font-size: 1.2rem;
-    font-weight: 500;
+  margin: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
-
 .orders-container .btn-buy {
-    border: none;
-    width: 100%;
-    padding: 1rem;
+  border: none;
+  width: 100%;
+  padding: 1rem;
 }
 
 .shop-cart-container .title-container {
-    display: flex;
-    padding: 1rem 2rem;
-    justify-content: space-around;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-around;
 }
-
 .shop-cart-container .title-container .title {
-    font-size: 1.3rem;
-    margin: 1rem 2rem;
+  font-size: 1.3rem;
+  margin: 1rem 2rem;
 }
 
 h1 {
-    color: green;
+  color: green;
 }
-
 
 /*# sourceMappingURL=styles.css.map */
