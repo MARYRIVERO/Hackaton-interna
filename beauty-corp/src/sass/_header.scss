@@ -1,0 +1,65 @@
+$smartphone: 480px;
+$tablet: 800px;
+$desktop: 1024px;
+
+@mixin style($direction, $content) {
+    width: 100%;
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: $content;
+}
+
+header {
+    @include style(column, center);
+    section {
+        @include style(row, space-around);
+        
+        .buttonBrand {
+            background: #6D308F;
+            border-color: rgb(117, 44, 156);
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            color: #FFFFFF;
+            @media (max-width: $smartphone) {
+                width: 40%;
+                height: 50px;
+            }
+            @media (min-width: $smartphone) and (max-width: $tablet) {
+                width: 45%;
+                height: 65px;
+            }
+            @media (min-width: $tablet) and (max-width: $desktop) {
+                width: 50%;
+                height: 75px;
+            }
+            @media (min-width: $desktop) {
+                width: 55%;
+                height: 75px;
+            }
+        }
+    }
+    nav {
+        @include style(row, center);
+
+        a {
+            cursor: pointer;
+
+            .imgLogoCabeza {
+                width: 50px;
+                height: 50px;
+            }
+            .imgLogoLetra {
+                width: 90px;
+                height: 50px;
+            }
+        }
+
+        ul li {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.shop-cart-container {
+  .title-container {
+    display: flex;
+    padding: 1rem 2rem;
+    justify-content: space-around;
+
+    img {
+      padding-right: 2rem;
+      cursor: pointer;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+    }
+
+    @media only screen and (min-width: 600px) {
+      justify-content: flex-start;
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+    justify-content: center;
+  }
+}
