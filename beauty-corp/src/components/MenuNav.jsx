@@ -7,7 +7,7 @@ import imgUser from '../img/user.svg';
 import imgPurse from '../img/vector.svg';
 import Search from './Search.jsx'
 
-const MenuNav = ({setCategory, show, setShow}) => {
+const MenuNav = ({setCategory, show, setShow, search, setSearch}) => {
 
     return (
         <section className="row">
@@ -57,11 +57,6 @@ const MenuNav = ({setCategory, show, setShow}) => {
                         </ul>
                     </div>
                 </nav>
-            </div>
-            <div className="col-12">
-                {show &&
-                    <Search/>
-                }
             </div>
         </section>
     )

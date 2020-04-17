@@ -12,7 +12,7 @@ const Header = ({ setType, setCategory, show, setShow }) => {
           <button type="button" className="buttonBrand" onClick={() => setType('LBel')}>Natural</button>
           {/* <Link to="/ShoppingCart"><button>Carrito</button></Link> */}
         </section>
-        <MenuNav setCategory={setCategory} show={show} setShow={setShow} />
+        <MenuNav setCategory={setCategory} show={show} setShow={setShow}/>
       </header>
   )
 }
