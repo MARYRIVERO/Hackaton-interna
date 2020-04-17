@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import MenuNav from './MenuNav';
 
-const Header = ({ setType, setCategory }) => {
+const Header = ({ setType, setCategory, show, setShow }) => {
 
   return (
       <header>
@@ -12,7 +12,7 @@ const Header = ({ setType, setCategory }) => {
           <button type="button" className="buttonBrand" onClick={() => setType('LBel')}>Natural</button>
           {/* <Link to="/ShoppingCart"><button>Carrito</button></Link> */}
         </section>
-        <MenuNav setCategory={setCategory} />
+        <MenuNav setCategory={setCategory} show={show} setShow={setShow} />
       </header>
   )
 }

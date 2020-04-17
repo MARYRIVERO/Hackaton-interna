@@ -6,6 +6,7 @@ import ItemBaner from '../components/ItemBaner';
 import ItemCarruselOfferst from '../components/ItemCarruselOfferts'
 import ItemFooter from './ItemFooter';
 
+
 const Home = ({ type, category }) => {
   const [arrayProducts, setArrayProducts] = useState([]);
   const [value, loading, error] = useCollection(
