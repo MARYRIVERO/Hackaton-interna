@@ -18,6 +18,7 @@ const MenuNav = ({ setCategory }) => {
                 <img src={imgLogoCabeza} className="imgLogoCabeza" />
                 <img src={imgLogoLetra} className="imgLogoLetra" />
             </a>
+            <a className="navbar-brand itemNav" href="./"><img src={imgSearch} /></a>
             <a className="navbar-brand itemNav" href="./"><img src={imgUser} /></a>
             <Link to="/ShoppingCart"><a className="navbar-brand itemNav" href="./"><img src={imgPurse} /></a></Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -51,11 +52,6 @@ const MenuNav = ({ setCategory }) => {
                     </li>
                 </ul>
             </div>
-            <div className="form-inline my-2 my-lg-0 divSearch">
-                <input className="form-control mr-sm-2" type="search" placeholder="Escribe nombre del producto" aria-label="Search"/>
-                <a><img src={imgSearch} alt=""/></a>
-            </div>
-
         </nav>
     )
 };

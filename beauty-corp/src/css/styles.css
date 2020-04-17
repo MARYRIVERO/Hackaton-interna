@@ -69,78 +69,6 @@ header nav a .imgLogoLetra {
 header nav ul li {
   cursor: pointer;
 }
-header nav .divSearch {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-}
-header nav .divSearch img {
-  position: absolute;
-  right: 0;
-  /* margin: 10px; */
-  padding-right: 5%;
-  color: #c882eb;
-  cursor: pointer;
-}
-@media (max-width: 480px) {
-  header nav .divSearch img {
-    right: 0;
-    padding-right: 4%;
-  }
-}
-@media (min-width: 480px) and (max-width: 800px) {
-  header nav .divSearch img {
-    right: 0;
-    padding-right: 7%;
-  }
-}
-@media (min-width: 800px) and (max-width: 1024px) {
-  header nav .divSearch img {
-    right: 0;
-    padding-right: 9%;
-  }
-}
-@media (min-width: 1024px) {
-  header nav .divSearch img {
-    right: 0;
-    padding-right: 10%;
-  }
-}
-header nav .divSearch input {
-  right: 0;
-  display: flex;
-  /*     margin: 2px;  */
-  /* padding-left: 3px; */
-  box-sizing: border-box;
-  width: 100%;
-}
-@media (max-width: 480px) {
-  header nav .divSearch input {
-    width: 100%;
-    right: 0;
-  }
-}
-@media (min-width: 480px) and (max-width: 800px) {
-  header nav .divSearch input {
-    width: 100%;
-    right: 0;
-  }
-}
-@media (min-width: 800px) and (max-width: 1024px) {
-  header nav .divSearch input {
-    left: 100px;
-    width: 800px;
-    right: 0;
-    padding-left: 100px;
-  }
-}
-@media (min-width: 1024px) {
-  header nav .divSearch input {
-    right: 0;
-  }
-}
 
 .item-order-container {
   display: flex;
@@ -227,24 +155,24 @@ header nav .divSearch input {
   width: 100%;
 }
 #view-section .Home-body #container-products {
-  width: 100%;
   padding: 3px 20px 3px 20px;
   align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
 }
 #view-section .Home-body #container-products li {
   display: -webkit-inline-box;
   margin-right: 7px;
 }
 #view-section .Home-body #container-products #ItemProduct {
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 15px;
-  margin: 5px 15px 5px 15px;
+  align-items: center;
   width: 150px;
   height: 288px;
-  align-items: center;
+  margin: 2px 15px 2px 15px;
 }
 #view-section .Home-body #container-products #ItemProduct img {
   display: flex;
@@ -310,11 +238,12 @@ header nav .divSearch input {
 #view-section .Home-body #container-products #ItemProduct button {
   display: flex;
   justify-content: center;
-  width: 150px;
-  height: 31px;
   border: 1px solid #000000;
   box-sizing: border-box;
   color: #000000;
+  width: 150px;
+  height: 31px;
+  margin: auto;
 }
 
 .root {
