@@ -6,6 +6,16 @@
 @import 'login';
 @import 'search';
 
-h1 {
-    color: green;
+.root {
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    margin: 0;
+
+    .app {
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        margin: 0;
+    }
 }

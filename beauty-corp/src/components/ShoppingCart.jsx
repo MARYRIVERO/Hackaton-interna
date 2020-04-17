@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import Orders from './Orders';
+import ItemFooter from './ItemFooter'
 import arrow from '../img/arrow-left.svg';
 
 const ShoppingCart = () => {
@@ -18,6 +19,7 @@ const ShoppingCart = () => {
         <h2 className="title">BOLSA DE COMPRAS</h2>
       </section>
       <Orders dataOrders={dataOrders}/>
+      <ItemFooter/>
     </main>
   );
 };
