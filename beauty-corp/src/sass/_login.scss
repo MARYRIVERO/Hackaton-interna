@@ -1,0 +1,64 @@
+$radius: 10px;
+$margin: 1rem;
+$bold: 500;
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10%;
+
+  h3 {
+    margin: 1*$margin 0 3*$margin;
+    text-align: center;
+  }
+
+  .btn-login {
+    background-color: #1ACAA4;
+  }
+
+  .btn-google {
+    background-color: #E64F4F;
+    color: #ffffff;
+    margin-bottom: $margin;
+  }
+
+  .btn-fb {
+    background-color: #2F52CF;
+    color: #ffffff;
+  }
+
+  .text-center {
+    text-align: center;
+    margin: $margin;
+  }
+
+  .font {
+    font-weight: $bold;
+    font-size: 1rem;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      margin: auto;
+    }
+
+    .icon {
+      width: 1.2rem;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    padding: 10% 20%;
+  }
+
+  @media only screen and (min-width: 992px) {
+    padding: 3% 32%;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding: 3% 38%;
+  }
+}
