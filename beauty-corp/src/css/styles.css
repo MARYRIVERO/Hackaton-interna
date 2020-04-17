@@ -171,6 +171,7 @@ header nav .imgLogo {
   border: none;
   width: 50%;
   padding: 1rem;
+  background-color: #1ACAA4;
 }
 .orders-container .btn-buy-group .first {
   border-right: 1px solid #000000;
@@ -189,6 +190,9 @@ header nav .imgLogo {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .orders-container .reception p {
+    margin-left: 10%;
+  }
 }
 
 .shop-cart-container .title-container {
@@ -198,6 +202,7 @@ header nav .imgLogo {
 }
 .shop-cart-container .title-container img {
   padding-right: 2rem;
+  cursor: pointer;
 }
 .shop-cart-container .title-container .title {
   font-size: 1.3rem;

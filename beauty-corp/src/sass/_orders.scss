@@ -61,6 +61,7 @@ $font-size: 1.2rem;
       border: none;
       width: 50%;
       padding: $margin;
+      background-color: #1ACAA4;
     }
 
     .first {
@@ -80,6 +81,11 @@ $font-size: 1.2rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+    }
+    .reception {
+      p {
+        margin-left: 10%;
+      }
     }
   }
 }
