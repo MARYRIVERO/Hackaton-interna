@@ -55,11 +55,91 @@ header nav {
   justify-content: center;
   align-items: center;
 }
-header nav .imgLogo {
-  width: 32px;
+header nav a {
+  cursor: pointer;
+}
+header nav a .imgLogoCabeza {
+  width: 50px;
+  height: 50px;
+}
+header nav a .imgLogoLetra {
+  width: 90px;
+  height: 50px;
 }
 header nav ul li {
   cursor: pointer;
+}
+header nav .divSearch {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+header nav .divSearch img {
+  position: absolute;
+  right: 0;
+  /* margin: 10px; */
+  padding-right: 5%;
+  color: #c882eb;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  header nav .divSearch img {
+    right: 0;
+    padding-right: 4%;
+  }
+}
+@media (min-width: 480px) and (max-width: 800px) {
+  header nav .divSearch img {
+    right: 0;
+    padding-right: 7%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+  header nav .divSearch img {
+    right: 0;
+    padding-right: 9%;
+  }
+}
+@media (min-width: 1024px) {
+  header nav .divSearch img {
+    right: 0;
+    padding-right: 10%;
+  }
+}
+header nav .divSearch input {
+  right: 0;
+  display: flex;
+  /*     margin: 2px;  */
+  /* padding-left: 3px; */
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (max-width: 480px) {
+  header nav .divSearch input {
+    width: 100%;
+    right: 0;
+  }
+}
+@media (min-width: 480px) and (max-width: 800px) {
+  header nav .divSearch input {
+    width: 100%;
+    right: 0;
+  }
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+  header nav .divSearch input {
+    left: 100px;
+    width: 800px;
+    right: 0;
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  header nav .divSearch input {
+    right: 0;
+  }
 }
 
 .item-order-container {
@@ -140,13 +220,40 @@ header nav ul li {
   margin: 1rem 2rem;
 }
 
+#view-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+#view-section .home-body #itemProduct {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#view-section .home-body #itemProduct img {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+#view-section .home-body #itemProduct button {
+  display: flex;
+  justify-content: center;
+  border: 3px solid #000000;
+}
+
 .root {
   display: flex;
   width: 100%;
+  flex-wrap: nowrap;
 }
 .root .app {
   display: flex;
   width: 100%;
+  flex-wrap: nowrap;
 }
 
 /*# sourceMappingURL=styles.css.map */

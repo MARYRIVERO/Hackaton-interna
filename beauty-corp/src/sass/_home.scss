@@ -1,0 +1,30 @@
+
+#view-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .home-body {
+        #itemProduct {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+    
+            img {
+               display: flex;
+               justify-content: center;
+               width: 50%;
+            }
+    
+            button {
+               display: flex;
+               justify-content: center;
+               border: 3px solid #000000;
+            }
+        }
+    }
+}

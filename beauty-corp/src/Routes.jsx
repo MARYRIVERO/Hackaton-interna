@@ -9,12 +9,18 @@ import Header from './components/Header';
 const Routes = () => {
   const [type, setType] = useState();
   const [category, setCategory] = useState();
+  const [valueInput, setInputValue] = useState('');
+
+  const clickSearch = (event) => {
+    event.preventDefault();
+    setInputValue(event.target.value);
+  }
 
   return (
     <BrowserRouter>
-      <Header setType={setType} setCategory={setCategory}/>
+      <Header setType={setType} setCategory={setCategory} setInputValue={setInputValue} valueSearch={valueInput} clickSearch={clickSearch}/>
       <Switch>
-        <Route exact path='/'><Home type={type} category={category} /></Route>
+        <Route exact path='/'><Home type={type} category={category} valueSearch={valueInput} /></Route>
         <Route path='/Login' component={Login} />
         <Route path='/ShoppingCart' component={ShoppingCart} />
       </Switch>

@@ -1,15 +1,18 @@
 @import '_header';
-@import 'itemorder';
-@import 'orders';
-@import 'shopcart';
+@import '_itemorder';
+@import '_orders';
+@import '_shopcart';
+@import '_home';
 
 
 .root {
     display: flex;
     width: 100%;
+    flex-wrap: nowrap;
 
     .app {
         display: flex;
         width: 100%;
+        flex-wrap: nowrap;
     }
 }

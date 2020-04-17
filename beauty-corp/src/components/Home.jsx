@@ -6,7 +6,8 @@ import ItemBaner from '../components/ItemBaner';
 import ItemCarruselOfferst from '../components/ItemCarruselOfferts'
 import ItemFooter from './ItemFooter';
 
-const Home = ({ type, category }) => {
+
+const Home = ({ type, category, valueSearch }) => {
   const [arrayProducts, setArrayProducts] = useState([]);
   const [value, loading, error] = useCollection(
     firebase.firestore().collection('products'),
@@ -33,32 +34,45 @@ const Home = ({ type, category }) => {
   localStorage.setItem('arrayProducts', JSON.stringify(arrayProducts));
 
   return (
-    <section>
-      <section className= "Home-body">
-      {error && <strong>Error: {JSON.stringify(error)}</strong>}
-      {loading && <span> Loading...</span>}
-      {value && (
+    <section id="view-section">
+      <section className="Home-body">
+        {error && <strong>Error: {JSON.stringify(error)}</strong>}
+        {loading && <span> Loading...</span>}
+        {value && (
+          <section>
+            {
+              (type && valueSearch === '') ?
+                value.docs.filter(doc => (!type || (type && doc.data().brand === type)) &&
+                  (!category || (category && doc.data().category === category)))
+                  .map(doc =>
+                    <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
+                  )
+                :
+                value.docs.filter(doc => (!type || (type && doc.data().brand === type)) &&
+                  (!category || (category && doc.data().category === category)))
+                  .map(doc => {
+                    const nameProduct = doc.data().name.toLowerCase();
+
+                    if (nameProduct === valueSearch.toLowerCase()) {
+                      return <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
+                    }
+
+                    return 'Producto no encontrado...';
+                  })
+            }
+          </section>
+        )}
         <section>
-        {value.docs.filter(doc => (!type || (type && doc.data().brand === type)) && 
-        (!category || (category && doc.data().category === category)))
-          .map(doc =>
-            <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
-          )}
+          <ItemBaner />
         </section>
-      )}
-      <section>
-        <ItemBaner/>
-      </section>
-      <section>
-        <ItemCarruselOfferst/>
-      </section>
+        <section>
+          <ItemCarruselOfferst />
+        </section>
       </section>
       <footer>
-      <ItemFooter/>
+        <ItemFooter />
       </footer>
-      
-     
-      
+
     </section>
   );
 };
