@@ -7,6 +7,7 @@ import Homepage from './components/Homepage'
 import ShoppingCart from './components/ShoppingCart';
 import Header from './components/Header';
 
+
 const Routes = () => {
   const [type, setType] = useState();
   const [category, setCategory] = useState();
@@ -23,6 +24,8 @@ const Routes = () => {
         <Route path='/ShoppingCart' component={ShoppingCart} />
       </Switch>
     </BrowserRouter>
-  )};
+  )
+};
+
 
 export default Routes;

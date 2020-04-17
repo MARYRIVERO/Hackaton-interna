@@ -50,7 +50,7 @@ const Home = ({ type, category, show, search, setSearch  }) => {
     }
   }
   return (
-    <section>
+    <section id="view-section">
       <div className="col-12">
           {show &&
               <Search search={search} setSearch={setSearch} searching={searching}/>
@@ -66,16 +66,18 @@ const Home = ({ type, category, show, search, setSearch  }) => {
       {error && <strong>Error: {JSON.stringify(error)}</strong>}
       {loading && <span> Loading...</span>}
       {(value && !search) && (
-        <section>
-        {value.docs.filter(doc => (!type || (type && doc.data().brand === type)) && 
-        (!category || (category && doc.data().category === category)))
-          .map(doc =>
-            <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
-          )}
+        <section id="container-products">
+        {
+          value.docs.filter(doc => (!type || (type && doc.data().brand === type)) &&
+            (!category || (category && doc.data().category === category)))
+            .map(doc =>
+              <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
+            )
+        }
         </section>
       )}
         {(value1 && search) && (
-        <section>
+        <section id="container-products">
         {value1.docs.filter(doc => (doc.data().name.indexOf(search.toUpperCase()) !== -1))
           .map(doc =>
             <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
