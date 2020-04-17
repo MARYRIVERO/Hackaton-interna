@@ -333,6 +333,28 @@ footer .logo-footer .footer-letters {
   }
 }
 
+.search-input {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #a5a3a3;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  margin-bottom: 7px;
+}
+
+input:focus, input.search-input:focus {
+  border-bottom: 1px solid #a5a3a3;
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
 h1 {
   color: green;
 }

@@ -7,17 +7,19 @@ import imgUser from '../img/user.svg';
 import imgPurse from '../img/vector.svg';
 import imgModa from '../img/moda.svg'
 
+const MenuNav = ({setCategory, show, setShow, search, setSearch}) => {
 
-const MenuNav = ({setCategory}) => {
     return (
+    <section className="row">
+    <div className="col-12 pl-0 pr-0">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
             <a className="navbar-brand" href="./homepage"><img src={imgLogo} className="imgLogo"/></a>
             <a className="navbar-brand" href="./"><img src={imgModa}/></a>
-            <a className="navbar-brand" href="./"><img src={imgSearch}/></a>
-            <a className="navbar-brand" href="./"><img src={imgUser}/></a>
+            <spam className="navbar-brand" onClick={() => setShow(show === true ? false : true)}><img src={imgSearch}/></spam>
+            <Link to="/Login"><a className="navbar-brand" href="./"><img src={imgUser}/></a></Link>
             <Link to="/ShoppingCart"><a className="navbar-brand" href="./"><img src={imgPurse}/></a></Link>
             <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -28,22 +30,22 @@ const MenuNav = ({setCategory}) => {
                         <a className="nav-link" href="./">Ofertas imperdibles</a>
                     </li>
                     <li className="nav-item active">
-                        <spam className="nav-link" onClick={() => setCategory('Maquillaje')}>Maquillaje</spam>
+                        <spam className="nav-link" onClick={() => setCategory('Maquillaje',setSearch(''))}>Maquillaje</spam>
                     </li>
                     <li className="nav-item active">
-                        <spam className="nav-link" onClick={() => setCategory('Cuidado Personal')}>Cuidado Personal</spam>
+                        <spam className="nav-link" onClick={() => setCategory('Cuidado Personal', setSearch(''))}>Cuidado Personal</spam>
                     </li>
                     <li className="nav-item active">
-                        <spam className="nav-link" onClick={() => setCategory('Tratamiento Corporal')}>Tratamiento Corporal</spam>
+                        <spam className="nav-link" onClick={() => setCategory('Tratamiento Corporal', setSearch(''))}>Tratamiento Corporal</spam>
                     </li>
                     <li className="nav-item active">
-                        <spam className="nav-link" onClick={() => setCategory('Tratamiento Facial')}>Tratamiento Facial</spam>
+                        <spam className="nav-link" onClick={() => setCategory('Tratamiento Facial', setSearch(''))}>Tratamiento Facial</spam>
                     </li>
                     <li className="nav-item active">
-                        <spam className="nav-link" onClick={() => setCategory('Fragancias')}>Fragancias</spam>
+                        <spam className="nav-link" onClick={() => setCategory('Fragancias', setSearch(''))}>Fragancias</spam>
                     </li>
                     <li className="nav-item active">
-                        <spam className="nav-link" onClick={() => setCategory('Accesorios Cosmeticos')}>Accesorios Cosméticos</spam>
+                        <spam className="nav-link" onClick={() => setCategory('Accesorios Cosmeticos', setSearch(''))}>Accesorios Cosméticos</spam>
                     </li>
                     <li className="nav-item active">
                         <spam className="nav-link" >Tiendas retail</spam>
@@ -54,6 +56,8 @@ const MenuNav = ({setCategory}) => {
                 </ul>
             </div>
         </nav>
+        </div>
+        </section>
     )
 };
 

@@ -10,13 +10,13 @@ import Header from './components/Header';
 const Routes = () => {
   const [type, setType] = useState();
   const [category, setCategory] = useState();
-
+  const [show, setShow] = useState(false);
+  const [search, setSearch] = useState();
   return (
     <BrowserRouter>
-      <Header setType={setType} setCategory={setCategory}/>
+      <Header setType={setType} setCategory={setCategory} show={show} setShow={setShow}  setSearch={setSearch}/>
       <Switch>
-        <Route exact path='/'><Home type={type} category={category} /></Route>
-        
+        <Route exact path='/'><Home type={type} category={category} show={show} setShow={setShow} search={search} setSearch={setSearch} /></Route>
         <Route path='/Login' component={Login} />
         <Route path='/homepage' component={Homepage} />
         <Route path='/Register' component={Register} />
