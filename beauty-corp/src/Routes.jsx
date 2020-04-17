@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
+import Homepage from './components/Homepage'
 import ShoppingCart from './components/ShoppingCart';
 import Header from './components/Header';
 
@@ -16,6 +17,7 @@ const Routes = () => {
         <Route exact path='/'><Home type={type} category={category} /></Route>
         
         <Route path='/Login' component={Login} />
+        <Route path='/homepage' component={Homepage} />
         <Route path='/ShoppingCart' component={ShoppingCart} />
       </Switch>
     </BrowserRouter>
