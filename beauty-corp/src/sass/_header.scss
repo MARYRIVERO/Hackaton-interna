@@ -13,7 +13,6 @@ $desktop: 1024px;
 
 header {
     @include style(column, center);
-
     section {
         @include style(row, space-around);
         .buttonBrand {
@@ -57,7 +56,7 @@ header {
                 height: 50px;
             }
         }
-        
+
         ul li {
             cursor: pointer;
         }
@@ -121,6 +120,6 @@ header {
                     right: 0;
                 }
             }
-        } 
+        }
     }
 }

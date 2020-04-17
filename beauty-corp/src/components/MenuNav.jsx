@@ -7,7 +7,7 @@ import imgUser from '../img/user.svg';
 import imgPurse from '../img/vector.svg';
 
 
-const MenuNav = ({ setCategory, valueSearch, setInputValue, clickSearch }) => {
+const MenuNav = ({ setCategory }) => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -52,8 +52,8 @@ const MenuNav = ({ setCategory, valueSearch, setInputValue, clickSearch }) => {
                 </ul>
             </div>
             <div className="form-inline my-2 my-lg-0 divSearch">
-                <input className="form-control mr-sm-2" type="search" placeholder="Escribe nombre del producto" aria-label="Search"  onChange={() => setInputValue(valueSearch)}/>
-                <a onClick={(event) => clickSearch(event)} ><img src={imgSearch} alt=""/></a>
+                <input className="form-control mr-sm-2" type="search" placeholder="Escribe nombre del producto" aria-label="Search"/>
+                <a><img src={imgSearch} alt=""/></a>
             </div>
 
         </nav>

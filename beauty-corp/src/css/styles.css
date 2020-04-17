@@ -222,38 +222,112 @@ header nav .divSearch input {
 
 #view-section {
   width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
+}
+#view-section .Home-body {
+  width: 100%;
+}
+#view-section .Home-body #container-products {
+  width: 100%;
+  padding: 3px 20px 3px 20px;
   align-items: center;
-  justify-content: center;
 }
-#view-section .home-body #itemProduct {
-  width: 50%;
+#view-section .Home-body #container-products li {
+  display: -webkit-inline-box;
+  margin-right: 7px;
+}
+#view-section .Home-body #container-products #ItemProduct {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 15px;
+  margin: 5px 15px 5px 15px;
+  width: 150px;
+  height: 288px;
+  align-items: center;
+}
+#view-section .Home-body #container-products #ItemProduct img {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+}
+@media (max-width: 480px) {
+  #view-section .Home-body #container-products #ItemProduct img {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 480px) and (max-width: 800px) {
+  #view-section .Home-body #container-products #ItemProduct img {
+    width: 45%;
+    height: 65px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+  #view-section .Home-body #container-products #ItemProduct img {
+    width: 50%;
+    height: 75px;
+  }
+}
+@media (min-width: 1024px) {
+  #view-section .Home-body #container-products #ItemProduct img {
+    width: 55%;
+    height: 75px;
+  }
+}
+#view-section .Home-body #container-products #ItemProduct #section-price {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+#view-section .Home-body #container-products #ItemProduct #section-price p {
+  font-family: Open Sans;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  margin: 5px;
+}
+#view-section .Home-body #container-products #ItemProduct #section-price #price {
+  font-weight: 0;
+  text-decoration-line: line-through;
+}
+#view-section .Home-body #container-products #ItemProduct #section-price #priceFinal {
+  font-weight: 600px;
+}
+#view-section .Home-body #container-products #ItemProduct h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 22px;
 }
-#view-section .home-body #itemProduct img {
+#view-section .Home-body #container-products #ItemProduct button {
   display: flex;
   justify-content: center;
-  width: 50%;
-}
-#view-section .home-body #itemProduct button {
-  display: flex;
-  justify-content: center;
-  border: 3px solid #000000;
+  width: 150px;
+  height: 31px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  color: #000000;
 }
 
 .root {
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
+  margin: 0;
 }
 .root .app {
   display: flex;
   width: 100%;
   flex-wrap: nowrap;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

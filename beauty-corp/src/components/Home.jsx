@@ -7,7 +7,7 @@ import ItemCarruselOfferst from '../components/ItemCarruselOfferts'
 import ItemFooter from './ItemFooter';
 
 
-const Home = ({ type, category, valueSearch }) => {
+const Home = ({ type, category }) => {
   const [arrayProducts, setArrayProducts] = useState([]);
   const [value, loading, error] = useCollection(
     firebase.firestore().collection('products'),
@@ -39,26 +39,13 @@ const Home = ({ type, category, valueSearch }) => {
         {error && <strong>Error: {JSON.stringify(error)}</strong>}
         {loading && <span> Loading...</span>}
         {value && (
-          <section>
+          <section id="container-products">
             {
-              (type && valueSearch === '') ?
-                value.docs.filter(doc => (!type || (type && doc.data().brand === type)) &&
-                  (!category || (category && doc.data().category === category)))
-                  .map(doc =>
-                    <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
-                  )
-                :
-                value.docs.filter(doc => (!type || (type && doc.data().brand === type)) &&
-                  (!category || (category && doc.data().category === category)))
-                  .map(doc => {
-                    const nameProduct = doc.data().name.toLowerCase();
-
-                    if (nameProduct === valueSearch.toLowerCase()) {
-                      return <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
-                    }
-
-                    return 'Producto no encontrado...';
-                  })
+              value.docs.filter(doc => (!type || (type && doc.data().brand === type)) &&
+                (!category || (category && doc.data().category === category)))
+                .map(doc =>
+                  <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
+                )
             }
           </section>
         )}

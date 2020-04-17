@@ -2,16 +2,19 @@ import React from 'react';
 
 
 const ItemProduct = ({ obj, sendToCart }) => (
-  <li>
+  <li className="text-decoration-none">
     <div id="ItemProduct">
-      <h3>{obj.name}</h3>
       <img src={obj.imgUrl} alt="" />
-      <p>{obj.price}</p>
-      <p>S/. {obj.priceFinal}</p>
-      <button type="button" onClick={() => sendToCart(obj, obj.name)}>Comprar</button>
+      <h6 className="text-center">{obj.name}</h6>
+      <section id="section-price">
+        <p id="price">{obj.price}</p>
+        <p id="priceFinal">S/. {obj.priceFinal}</p>
+      </section>
+      <button onClick={() => sendToCart(obj, obj.name)}>Agregar</button>
     </div>
   </li>
 );
 
 
 export default ItemProduct;
+
