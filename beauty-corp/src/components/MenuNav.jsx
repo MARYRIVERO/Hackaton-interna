@@ -5,6 +5,7 @@ import imgLogo from '../img/logobeautycorp.png';
 import imgSearch from '../img/search.svg';
 import imgUser from '../img/user.svg';
 import imgPurse from '../img/vector.svg';
+import imgModa from '../img/moda.svg'
 
 
 const MenuNav = ({setCategory}) => {
@@ -14,6 +15,7 @@ const MenuNav = ({setCategory}) => {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <a className="navbar-brand" href="./homepage"><img src={imgLogo} className="imgLogo"/></a>
+            <a className="navbar-brand" href="./"><img src={imgModa}/></a>
             <a className="navbar-brand" href="./"><img src={imgSearch}/></a>
             <a className="navbar-brand" href="./"><img src={imgUser}/></a>
             <Link to="/ShoppingCart"><a className="navbar-brand" href="./"><img src={imgPurse}/></a></Link>
