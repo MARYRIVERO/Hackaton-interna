@@ -18,6 +18,12 @@ const Home = ({ type, category, show, search, setSearch  }) => {
     }
   );
 
+  const [value1] = useCollection(
+    firebase.firestore().collection('products'),
+    {
+      snapshotListenOptions: { includeMetadataChanges: true },
+    }
+  );
   const sendToCart = (obj, name) => {
     let arrayId = arrayProducts.filter(el => el.name === name)
     if (arrayId.length === 0) {
@@ -53,16 +59,24 @@ const Home = ({ type, category, show, search, setSearch  }) => {
       <section className= "Home-body">
       {error && <strong>Error: {JSON.stringify(error)}</strong>}
       {loading && <span> Loading...</span>}
-      {value && (
+      {(value && !search) && (
         <section>
         {value.docs.filter(doc => (!type || (type && doc.data().brand === type)) && 
-        (!category || (category && doc.data().category === category)) &&
-        (search && doc.data().name === search) )
+        (!category || (category && doc.data().category === category)))
           .map(doc =>
             <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
           )}
         </section>
       )}
+        {(value1 && search) && (
+        <section>
+        {value1.docs.filter(doc => (doc.data().name.indexOf(search.toUpperCase()) !== -1))
+          .map(doc =>
+            <ItemProduct key={doc.id} obj={doc.data()} sendToCart={sendToCart} />
+          )}
+        </section>
+      )}
+
       <section>
         <ItemBaner/>
       </section>
@@ -70,6 +84,7 @@ const Home = ({ type, category, show, search, setSearch  }) => {
         <ItemCarruselOfferst/>
       </section>
       </section>
+
       <footer/>
       <ItemFooter/>
     </section>

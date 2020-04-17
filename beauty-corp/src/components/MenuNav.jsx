@@ -31,22 +31,22 @@ const MenuNav = ({setCategory, show, setShow, search, setSearch}) => {
                                 <a className="nav-link" href="./">Ofertas imperdibles</a>
                             </li>
                             <li className="nav-item active">
-                                <spam className="nav-link" onClick={() => setCategory('Maquillaje')}>Maquillaje</spam>
+                                <spam className="nav-link" onClick={() => setCategory('Maquillaje',setSearch(''))}>Maquillaje</spam>
                             </li>
                             <li className="nav-item active">
-                                <spam className="nav-link" onClick={() => setCategory('Cuidado Personal')}>Cuidado Personal</spam>
+                                <spam className="nav-link" onClick={() => setCategory('Cuidado Personal', setSearch(''))}>Cuidado Personal</spam>
                             </li>
                             <li className="nav-item active">
-                                <spam className="nav-link" onClick={() => setCategory('Tratamiento Corporal')}>Tratamiento Corporal</spam>
+                                <spam className="nav-link" onClick={() => setCategory('Tratamiento Corporal', setSearch(''))}>Tratamiento Corporal</spam>
                             </li>
                             <li className="nav-item active">
-                                <spam className="nav-link" onClick={() => setCategory('Tratamiento Facial')}>Tratamiento Facial</spam>
+                                <spam className="nav-link" onClick={() => setCategory('Tratamiento Facial', setSearch(''))}>Tratamiento Facial</spam>
                             </li>
                             <li className="nav-item active">
-                                <spam className="nav-link" onClick={() => setCategory('Fragancias')}>Fragancias</spam>
+                                <spam className="nav-link" onClick={() => setCategory('Fragancias', setSearch(''))}>Fragancias</spam>
                             </li>
                             <li className="nav-item active">
-                                <spam className="nav-link" onClick={() => setCategory('Accesorios Cosmeticos')}>Accesorios Cosméticos</spam>
+                                <spam className="nav-link" onClick={() => setCategory('Accesorios Cosmeticos', setSearch(''))}>Accesorios Cosméticos</spam>
                             </li>
                             <li className="nav-item active">
                                 <spam className="nav-link" >Tiendas retail</spam>

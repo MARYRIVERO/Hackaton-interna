@@ -12,7 +12,7 @@ const Routes = () => {
   const [search, setSearch] = useState();
   return (
     <BrowserRouter>
-      <Header setType={setType} setCategory={setCategory} show={show} setShow={setShow}/>
+      <Header setType={setType} setCategory={setCategory} show={show} setShow={setShow}  setSearch={setSearch}/>
       <Switch>
         <Route exact path='/'><Home type={type} category={category} show={show} setShow={setShow} search={search} setSearch={setSearch} /></Route>
         <Route path='/Login' component={Login} />
