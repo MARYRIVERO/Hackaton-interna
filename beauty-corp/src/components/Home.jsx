@@ -56,6 +56,12 @@ const Home = ({ type, category, show, search, setSearch  }) => {
               <Search search={search} setSearch={setSearch} searching={searching}/>
           }
       </div>
+          {(!show && (!type) && !category) &&
+            <>
+              <ItemBaner />
+              <ItemCarruselOfferst />
+            </>
+          }
       <section className= "Home-body">
       {error && <strong>Error: {JSON.stringify(error)}</strong>}
       {loading && <span> Loading...</span>}
