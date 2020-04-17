@@ -2,6 +2,26 @@ $margin: 1rem;
 $font-size: 1.2rem;
 
 .orders-container {
+  .reception {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $margin;
+    justify-content: space-around;
+
+    p {
+      width: 100%;
+    }
+
+    .type {
+      font-size: 0.85rem;
+      cursor: pointer;
+      
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
   hr {
     margin: 0;
   }
@@ -12,6 +32,7 @@ $font-size: 1.2rem;
     width: 100%;
     padding: 0;
     font-size: $font-size;
+
     img {
       margin: $margin $margin $margin 0;
       width: 1.7rem;
@@ -21,17 +42,50 @@ $font-size: 1.2rem;
   .subtotal {
     display: flex;
     justify-content: space-between;
-  
+
     span {
       margin: $margin;
       font-size: $font-size;
       font-weight: 500;
     }
+
+    @media only screen and (min-width: 768px) {
+      justify-content: center;
+    }
   }
-  
-  .btn-buy {
-    border: none;
-    width: 100%;
-    padding: $margin;
+
+  .btn-buy-group {
+    display: flex;
+
+    .btn-buy {
+      border: none;
+      width: 50%;
+      padding: $margin;
+      background-color: #1ACAA4;
+    }
+
+    .first {
+      border-right: 1px solid #000000;
+    }
+
+    @media only screen and (min-width: 992px) {
+      justify-content: center;
+      .btn-buy {
+        width: 30%;        
+      }
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .orders {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .reception {
+      p {
+        margin-left: 10%;
+      }
+    }
   }
 }

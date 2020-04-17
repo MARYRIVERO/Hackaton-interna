@@ -62,7 +62,22 @@ header nav .imgLogo {
 .item-order-container {
   display: flex;
   max-width: 100vw;
-  margin: 10px;
+  padding: 0 1rem 2rem;
+}
+@media only screen and (min-width: 600px) {
+  .item-order-container {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .item-order-container {
+    padding: 0 2rem 2rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .item-order-container {
+    width: 33%;
+  }
 }
 .item-order-container .img {
   width: 30%;
@@ -77,13 +92,20 @@ header nav .imgLogo {
 .item-order-container .description .name {
   align-self: center;
   margin: 15px 0 15px 0;
+  text-align: center;
 }
-.item-order-container .description p {
-  margin: 15px 30px 15px 30px;
+.item-order-container .description .btn-container {
+  border: none;
+  padding: none;
+  background-color: transparent;
 }
-.item-order-container .description .btn-qty {
+.item-order-container .description .btn-container .btn-qty {
   cursor: pointer;
   width: 2.5rem;
+}
+.item-order-container .description .count {
+  font-size: 1rem;
+  margin: 15px 15px;
 }
 .item-order-container .description .delete-price {
   width: 100%;
@@ -108,8 +130,23 @@ header nav .imgLogo {
 .container-baner .container-baners .card-body {
   background-color: #7AC4A7;
 }
+.container-baner .container-baners .card-body .container-image {
+  width: 40%;
+}
 .container-baner .container-baners .card-body .container-image img {
   border-radius: 50%;
+}
+.container-baner .container-baners .card-body .description {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media only screen and (min-width: 600px) {
+  .container-baner .container-baners .card-body {
+    text-align: center;
+  }
 }
 
 footer {
@@ -141,6 +178,22 @@ footer .logo-footer .footer-letters {
   text-align: center;
 }
 
+.orders-container .reception {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  justify-content: space-around;
+}
+.orders-container .reception p {
+  width: 100%;
+}
+.orders-container .reception .type {
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.orders-container .reception .type img {
+  margin-right: 0.5rem;
+}
 .orders-container hr {
   margin: 0;
 }
@@ -164,10 +217,40 @@ footer .logo-footer .footer-letters {
   font-size: 1.2rem;
   font-weight: 500;
 }
-.orders-container .btn-buy {
+@media only screen and (min-width: 768px) {
+  .orders-container .subtotal {
+    justify-content: center;
+  }
+}
+.orders-container .btn-buy-group {
+  display: flex;
+}
+.orders-container .btn-buy-group .btn-buy {
   border: none;
-  width: 100%;
+  width: 50%;
   padding: 1rem;
+  background-color: #1ACAA4;
+}
+.orders-container .btn-buy-group .first {
+  border-right: 1px solid #000000;
+}
+@media only screen and (min-width: 992px) {
+  .orders-container .btn-buy-group {
+    justify-content: center;
+  }
+  .orders-container .btn-buy-group .btn-buy {
+    width: 30%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .orders-container .orders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .orders-container .reception p {
+    margin-left: 10%;
+  }
 }
 
 .shop-cart-container .title-container {
@@ -175,9 +258,79 @@ footer .logo-footer .footer-letters {
   padding: 1rem 2rem;
   justify-content: space-around;
 }
+.shop-cart-container .title-container img {
+  padding-right: 2rem;
+  cursor: pointer;
+}
 .shop-cart-container .title-container .title {
   font-size: 1.3rem;
-  margin: 1rem 2rem;
+  margin: 1rem 0;
+}
+@media only screen and (min-width: 600px) {
+  .shop-cart-container .title-container {
+    justify-content: flex-start;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .shop-cart-container {
+    justify-content: center;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10%;
+}
+.login-container h3 {
+  margin: 1rem 0 3rem;
+  text-align: center;
+}
+.login-container .btn-login {
+  background-color: #1ACAA4;
+}
+.login-container .btn-google {
+  background-color: #E64F4F;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.login-container .btn-fb {
+  background-color: #2F52CF;
+  color: #ffffff;
+}
+.login-container .text-center {
+  text-align: center;
+  margin: 1rem;
+}
+.login-container .font {
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container .font span {
+  margin: auto;
+}
+.login-container .font .icon {
+  width: 1.2rem;
+}
+@media only screen and (min-width: 600px) {
+  .login-container {
+    padding: 10% 20%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .login-container {
+    padding: 3% 32%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .login-container {
+    padding: 3% 38%;
+  }
 }
 
 h1 {
